@@ -1,65 +1,43 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>
-            <?php $cakeDescription = __d('cake_dev', 'Good anime to watch'); ?>
-            <?php echo $cakeDescription ?>:
-            <?php echo $title_for_layout; ?>
-	</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <meta name="description" content="" />
-        <meta name="copyright" content="" />
-        
-        <?php echo $this->Html->meta('icon'); ?>
-        <?php echo $this->Html->css('kickstart'); ?>
-        <?php echo $this->Html->css('style'); ?>
-        <?php  echo $this->Html->script('https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'); ?>
-        <?php  echo $this->Html->script('kickstart'); ?>
-    </head>
-<body>
+<html><head>
+<title>HTML KickStart Elements</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="" />
+<meta name="copyright" content="" />
+<link rel="stylesheet" type="text/css" href="css/kickstart.css" media="all" />                  <!-- KICKSTART -->
+<link rel="stylesheet" type="text/css" href="style.css" media="all" />                          <!-- CUSTOM STYLES -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="js/kickstart.js"></script>                                  <!-- KICKSTART -->
+</head><body>
 
 <!-- Menu Horizontal -->
-    <ul class="menu">
-        <li class="current"><?php echo $this->Html->link('Home',array('controller'=>'pages','action'=>'home')) ?></li>        
-        <li><a href="">Item 2</a></li>
-        <li><a href=""><span class="icon" data-icon="R"></span>Users</a>
-            <ul>
-                <li><?php echo $this->Html->link('<span class="icon" data-icon="G"></span>Register',array('controller'=>'users','action'=>'add'),array('escape' => FALSE)); ?></li>
-                <li><?php echo $this->Html->link('<span class="icon" data-icon="G"></span>Login',array('controller'=>'users','action'=>'login'),array('escape' => FALSE)); ?></li>
-                <li><?php echo $this->Html->link('<span class="icon" data-icon="G"></span>Logout',array('controller'=>'users','action'=>'logout'),array('escape' => FALSE)); ?></li>
-                <li><a href=""><span class="icon" data-icon="A"></span>Sub Item</a>
-                    <ul>
-                        <li><a href=""><span class="icon" data-icon="Z"></span>Sub Item</a></li>
-                        <li><a href=""><span class="icon" data-icon="k"></span>Sub Item</a></li>
-                        <li><a href=""><span class="icon" data-icon="J"></span>Sub Item</a></li>
-                        <li><a href=""><span class="icon" data-icon="="></span>Sub Item</a></li>
-                    </ul>
-                </li>
-                
-                <li class="divider"><a href=""><span class="icon" data-icon="T"></span>li.divider</a></li>
-            </ul>
-        </li>
-        <li><a href=""><span class="icon" data-icon="R"></span>Tags</a>
-            <ul>
-                <li><?php echo $this->Html->link('<span class="icon" data-icon="G"></span>Add Tags',array('controller'=>'tags','action'=>'add'),array('escape' => FALSE)); ?></li>
-                <li><?php echo $this->Html->link('<span class="icon" data-icon="G"></span>List',array('controller'=>'tags','action'=>'index'),array('escape' => FALSE)); ?></li>
-                        
-            </ul>
-        </li>
-        <li><a href="">Item 4</a></li>
-    </ul>
+<ul class="menu">
+<li class="current"><a href="">Item 1</a></li>
+<li><a href="">Item 2</a></li>
+<li><a href=""><span class="icon" data-icon="R"></span>Item 3</a>
+	<ul>
+	<li><a href=""><span class="icon" data-icon="G"></span>Sub Itemssss</a></li>
+	<li><a href=""><span class="icon" data-icon="A"></span>Sub Item</a>
+		<ul>
+		<li><a href=""><span class="icon" data-icon="Z"></span>Sub Item</a></li>
+		<li><a href=""><span class="icon" data-icon="k"></span>Sub Item</a></li>
+		<li><a href=""><span class="icon" data-icon="J"></span>Sub Item</a></li>
+		<li><a href=""><span class="icon" data-icon="="></span>Sub Item</a></li>
+		</ul>
+	</li>
+	<li class="divider"><a href=""><span class="icon" data-icon="T"></span>li.divider</a></li>
+	</ul>
+</li>
+<li><a href="">Item 4</a></li>
+</ul>
 
-    <div class="grid">
+<div class="grid">
 	
 <!-- ===================================== END HEADER ===================================== -->
 	 
-    <div class="col_12">
+<div class="col_12">
 	<div class="col_9">
-            
-            <?php echo $this->Session->flash(); ?>
-
-            <?php echo $this->fetch('content'); ?>
 	<h3>Paragraphs</h3>
 	<p><img class="align-left" src="http://placehold.it/180x150/4D99E0/ffffff.png&text=180x150" width="180" height="150" />
 	Lorem ipsum dolor sit amet, consectetuer <em>adipiscing elit</em>, sed diam nonummy nibh euismod 
